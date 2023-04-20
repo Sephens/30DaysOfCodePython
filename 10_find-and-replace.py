@@ -4,21 +4,23 @@ that this function must be case-sensitive: if you are replacing 'dog' with 'fox'
 'MY DOG JONESY' won’t be replaced."""
 
 def findAndReplace(text, oldText, newText):
-    # a variable to hold the text with replacements
+    # a variable to hold the text that was replaced
     replacedText = ''
-    i = 0
-    while i < len(text):
-        # If index i in text is the start of the oldText pattern, add
-        # the replacement text:
-        if text[i:i + len(oldText)] == oldText:
+    
+    index = 0
+    
+    while index < len(text):
+    # If index i in text is the start of the oldText pattern, add
+    # the replacement text:
+        if text[index:index + len(oldText)] == oldText:
             # Add the replacement text:
-            oldText += newText
+            replacedText += newText
             # Increment i by the length of oldText:
-            i += len(oldText)
-        # Otherwise, add the characters at text[i] and increment i by 1:
+            index += len(oldText)
+     # Otherwise, add the characters at text[i] and increment i by 1:
         else:
-            replacedText += text[i]
-            i += 1
+            replacedText += text[index]
+            index += 1
     return replacedText
 
-print(findAndReplace('The book of good', 'good', 'brooms'))
+print(findAndReplace("The book of good is good", "good", "godies"))
