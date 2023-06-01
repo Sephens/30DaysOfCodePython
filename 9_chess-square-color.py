@@ -8,11 +8,12 @@ function returns a blank string."""
 # There is a pattern to the colors of a chess board. If the column and row are both even or both
 # odd, then the space is white. If one is odd and the other is even, the space is black.
 def getChessSquareColor(col, row):
-    if col <1 or col > 8 or row < 1 or row > 8:
+    if col < 1 or col > 8 or row < 1 or row > 8:
         return 'Error!'
     if col % 2 == row % 2:
         return 'white'
     else:
         return 'black'
-        
-print(getChessSquareColor(0,0))
+
+
+print(getChessSquareColor(0, 0))

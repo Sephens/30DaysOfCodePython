@@ -4,12 +4,13 @@ minutes, and seconds. If the amount for the hours, minutes, or seconds is zero, 
 function should return '10m' rather than '0h 10m 0s'. The only exception is that
 getHoursMinutesSeconds(0) should return '0s'."""
 
+
 def getHoursMinutesSeconds(totalseonds):
 
     # If the toatal seconds is 0 return os
     if totalseonds == 0:
         return '0s'
-    
+
     # set hours to 0 and then add 1 hr for every 3600 seconds removed in
     # the totalsecons
 
@@ -23,7 +24,7 @@ def getHoursMinutesSeconds(totalseonds):
         hours += 1
         totalseonds -= 3600
 
-    # set minutes to 0, and then add a minute for every 60 seconds removed from 
+    # set minutes to 0, and then add a minute for every 60 seconds removed from
     # the totalseconds until the totalseconds is less than 60
 
     minutes = 0
@@ -33,7 +34,6 @@ def getHoursMinutesSeconds(totalseonds):
 
     # set seconds to the remaining totalSecond
     seconds = totalseonds
-
 
     # create a string that holds the hrs:min:sec
 
@@ -51,6 +51,7 @@ def getHoursMinutesSeconds(totalseonds):
         hms.append(str(seconds) + 'S')
 
     return '-'.join(hms)
+
 
 result = getHoursMinutesSeconds(600000)
 print(result)

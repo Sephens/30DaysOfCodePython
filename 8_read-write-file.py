@@ -4,24 +4,27 @@ appendToFile() function, which is identical to writeToFile() except that the fil
 append mode instead of write mode. Finally, write a readFromFile() function with one parameter
 for the filename to open. This function returns the full text contents of the file as a string."""
 
-def writeToFile(filename,text):
+
+def writeToFile(filename, text):
     # Open the file in write mode:
     with open(filename, 'w') as whello:
         # Write the text to the file:
         whello.write(text)
 
-def appendToFile(filename,text):
+
+def appendToFile(filename, text):
     # Open the file in append mode:
     with open(filename, 'a') as ahello:
         # Write the text to the end of the file:
         ahello.write(text)
 
+
 def readFromFile(filename):
     # Open the file in read mode:
     with open(filename, 'r') as rhello:
         return rhello.read()
-        
-        
+
+
 writeToFile('Hello.txt', 'Hello Steve \n')
 appendToFile('Hello.txt', 'How are you? \n')
 readFromFile('Hello.txt')

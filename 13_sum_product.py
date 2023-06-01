@@ -7,29 +7,28 @@ is empty, the function returns 1. Since this function replicates Python’s sum(
 shouldn’t call."""
 
 # Function calculate sum
+
+
 def calculateSum(numbers):
-     #check wether the list is empty
-     if len(numbers) == 0:
-          return 0
-     
-     result = 0
-     for i in numbers:
-          result += i
-     return result
-     
-    
-    
+    # check wether the list is empty
+    if len(numbers) == 0:
+        return 0
+
+    result = 0
+    for i in numbers:
+        result += i
+    return result
 
 
 def calculateProduct(numbers):
-     if len(numbers) == 0:
-          return 0
-     
-     result = 1
-     for i in numbers:
-          result *= i
-     return result
+    if len(numbers) == 0:
+        return 0
 
-print(calculateSum([3,5,7,99]))
-print(calculateProduct([3,5,7,99]))
-     
+    result = 1
+    for i in numbers:
+        result *= i
+    return result
+
+
+print(calculateSum([3, 5, 7, 99]))
+print(calculateProduct([3, 5, 7, 99]))

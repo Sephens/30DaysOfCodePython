@@ -20,10 +20,12 @@ following:
 # 01101100, 01101111 in binary. An ASCII table showed all the characters and their assigned ASCII
 # number values.
 
+
 def printASCIITable():
     # Loop over integers 32 up to and including 126:
-    for number in range(32,127):
+    for number in range(32, 127):
         # Print the integer and its ASCII text character:
         print(number, chr(number))
-        
+
+
 printASCIITable()
