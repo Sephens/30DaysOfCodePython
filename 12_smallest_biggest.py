@@ -10,10 +10,11 @@ def getSmallest(numbers):
     
     smallest = numbers[0]
     for i in (numbers):
-        if numbers[i] < smallest:
-            smallest = numbers[i]
+        if i < smallest:
+            smallest = i
     return smallest
 
+myList = [34,6,77,4,0]
 
-result  = getSmallest(5,10)
+result  = getSmallest(myList)
 print(result)
