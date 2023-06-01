@@ -4,10 +4,10 @@ list. If the list is empty, the function should return None. Since this function
 min() function, your solution shouldn’t use it."""
 
 def getSmallest(numbers):
-
+    # Check wether the list is empty
     if len(numbers) == 0:
         return None 
-    
+    # take the first number in the list as the smallest and compare it with the rest
     smallest = numbers[0]
     for i in (numbers):
         if i < smallest:
